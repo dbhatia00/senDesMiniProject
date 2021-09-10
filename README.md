@@ -14,7 +14,7 @@ Instructions for running application on iOS device:
   
     b) expo install expo-google-app-auth
   
-5) Run the project using the command: expo start 
+5) Run the project using the expo command: expo start 
   
     a) Running the project will open a new tab on default web browser 
 
