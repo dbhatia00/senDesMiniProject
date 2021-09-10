@@ -1,0 +1,28 @@
+Design Decisions
+
+The first step of our design process was to create a barcode scanner using the BarCodeScanner module found at: https://docs.expo.dev/versions/latest/sdk/bar-code-scanner/.
+After importing the module, we updated App.js to include the barcode scanner. Barcode scanner features include: 
+ 
+  1) If the user does not have their camera enabled, a message will inform the user that their camera is not accessible. 
+  
+  2) Upon scan of a barcode, the user will be redirected to nutritional facts for the product listed by the FDA
+  
+  3) The user will have the option to scan another barcode if needed 
+  
+The second step of our design process was to create a Gmail login page using the Google module found at: https://docs.expo.dev/versions/latest/sdk/google/. 
+After importing the module, we updated App.js to include the login page. Gmail login feautres include:
+
+  1) Clicking on the link will open up a browser within the app
+  
+  2) The user will need to authenticate using a valid Gmail account
+  
+  3) The user will then be taken to the barcode if the Gmail is correct 
+  
+  
+  
+  
+  
+ Works Cited 
+ 
+ 1) https://docs.expo.dev/versions/latest/sdk/bar-code-scanner/ 
+ 2) https://docs.expo.dev/versions/latest/sdk/google/
