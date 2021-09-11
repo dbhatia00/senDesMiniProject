@@ -9,13 +9,16 @@
   },
   "dependencies": {
     "expo": "~42.0.1",
+    "expo-barcode-scanner": "~10.2.2",
+    "expo-camera": "~11.2.2",
+    "expo-google-app-auth": "^8.2.2",
     "expo-status-bar": "~1.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
-    "react-native-web": "~0.13.12",
-    "expo-camera": "~11.2.2",
-    "expo-barcode-scanner": "~10.2.2"
+    "react-native-web": "^0.17.1",
+    "rn-nodeify": "^10.3.0",
+    "write-json-file": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"

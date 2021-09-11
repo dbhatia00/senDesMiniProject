@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Image, Button } from "react-native"
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import * as Google from "expo-google-app-auth"
 
+
 export default class App extends React.Component {
   //Constructor for managing different pages and signedIn state
   constructor(props) {
@@ -75,7 +76,8 @@ const BarcodePage = props => {
 
     const handleBarCodeScanned = ({ type, data }) => {
       setScanned(true);
-      alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+      alert(`Bar code with type ${type} and data ${data.substring(1)} has been scanned!`);
+      APIHandler(data.substring(1));
     };
 
     if (hasPermission === null) {
@@ -94,6 +96,19 @@ const BarcodePage = props => {
           {scanned && <Button title={'Tap to Scan Again'} onPress={() => setScanned(false)} />}
         </View>
     );
+}
+
+//API Caller
+function APIHandler (inputData){
+  fetch(`https://api.nal.usda.gov/fdc/v1/foods/search?query=${inputData}&api_key=DEMO_KEY`)
+    .then(response => response.json())
+    .then(
+      data => {
+        console.log(data);
+        //writeJsonFile('temp.json', JSON.stringify(data));
+      });
+
+  
 }
 
 //Styles for login page and barcode page
