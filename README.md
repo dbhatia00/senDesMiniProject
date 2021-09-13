@@ -4,28 +4,44 @@ Instructions for running application on iOS device:
   
     a) Place the project folder in a known location 
 
-2) Install the Expo Command Line using the link: https://reactnative.dev/docs/environment-setup
+2) Using Linux, Mac OS, or Windows...navigate to project directory
 
-3) Using Linux, Mac OS, or Windows...navigate to project directory
+3) Install the Expo Command Line within the project directory:
 
-4) Imports needed before starting project:
+    a) npm install expo
+ 
+4) Import React Navigation module:
   
+    a) npm install @react-navigation/native
+    
+    b) expo install react-native-screens react-native-safe-area-context
+    
+    c) npm install @react-navigation/native-stack
+    
+    d) npm install @react-navigation/stack
+    
+    e) expo install react-native-gesture-handler
+
+5) Install the Google module for Expo:
+
+    a) expo install expo-google-app-auth
+    
+6) Install the Firebase module for Expo:
+
+    a) expo install firebase
+    
+7) Install the Barcode Scanner module for Expo:
+
     a) expo install expo-barcode-scanner
-  
-    b) expo install expo-google-app-auth
-  
-5) Run the project using the expo command: expo start 
-  
-    a) Running the project will open a new tab on default web browser 
+    
+8) Run the project:
 
-6) Select "Tunnel" on the web server page 
-
-7) If Expo Go client app is not downloaded...
-  
-    a) Download from the App Store
-  
-    b) Create an account 
-
-8) Using iPhone camera, scan barcode on webpage to open the app on Expo Go
-
-9) Sign-in to the app using a valid Gmail account 
+    a) expo start 
+    
+9) Navigate to the web server running the application:
+    
+    a) Click "Tunnel" button above the barcode 
+    
+    b) If Expo Go client app not downloaded...download from App Store
+    
+    c) Using iPhone camera...scan barcode and open app in Expo Go 
