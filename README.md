@@ -1,4 +1,4 @@
-Instructions for running application on iOS device:
+Instructions for running application on iOS:
 
 1) Download project onto local machine
   
