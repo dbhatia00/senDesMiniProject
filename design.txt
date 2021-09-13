@@ -19,7 +19,9 @@ After importing the module, we updated App.js to include the login page. Gmail l
   3) The user will then be taken to the barcode if the Gmail is correct 
   
   
-  
+Next was the call to the FDC API. This was strapped to the barcode scanner module, eliminating extra steps for the user to access the targeted information.
+For testing purposes, the entire data from the API was printed to the console. For sending to the database (and subsequently the REST API), we selected 
+bits of information.
   
   
  Works Cited 
