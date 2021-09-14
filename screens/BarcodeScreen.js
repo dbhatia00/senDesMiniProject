@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
+import { db } from './Firebase'
 
 const BarcodeScreen = () => {
     const [hasPermission, setHasPermission] = useState(null);
@@ -37,13 +38,20 @@ const BarcodeScreen = () => {
     );
 }
 
-function APIHandler (inputData){
+APIHandler = (inputData) => {
+  db.collection('food_items')
   fetch(`https://api.nal.usda.gov/fdc/v1/foods/search?query=${inputData}&api_key=DEMO_KEY`)
     .then(response => response.json())
     .then(
       data => {
         console.log(data);
+        addData(data);
       });
+}
+
+addData = (data) => {
+  db.collection('food_items')
+    .add(data)
 }
 
 const styles = StyleSheet.create({

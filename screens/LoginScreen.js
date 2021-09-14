@@ -43,7 +43,7 @@ const LoginScreen = ({ navigation }) => {
   
       if (result.type === 'success') {
         onSignIn(result);
-        navigation.navigate('Barcode Screen')
+        navigation.navigate('Dashboard Screen')
         return result.accessToken;
       } else {
         return { cancelled: true };
@@ -55,7 +55,7 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Image source={logo} style={{ width: 305, height: 250 }}/>
+      <Image source={logo} style={{ width: 305, height: 305 }}/>
       <Text style={styles.title}>
         Welcome to FoodScan
       </Text>
@@ -76,17 +76,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   title: {
-    fontSize: 36,
+    fontSize: 38,
     fontWeight: 'bold',
     marginBottom: 140,
     marginTop: 30
   },
   body: {
-    fontSize: 25
+    fontSize: 25,
   }
 })
