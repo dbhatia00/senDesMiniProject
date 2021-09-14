@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
+import { Text, View, StyleSheet, Button, Alert } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { db } from './Firebase'
 
@@ -16,7 +16,14 @@ const BarcodeScreen = () => {
 
     const handleBarCodeScanned = ({ type, data }) => {
       setScanned(true);
-      alert(`Bar code with type ${type} and data ${data.substring(1)} has been scanned!`);
+      //alert(`Bar code with type ${type} and data ${data.substring(1)} has been scanned!`);
+      //alert.prompt(`Bar code with type ${type} and data ${data.substring(1)} has been scanned!`)
+      var servingSize = Alert.prompt(
+        "Barcode scanned!",
+        "Please enter number of servings",
+        undefined,undefined,'1','number-pad'
+      )
+      console.log(`******************* ${servingSize} *********************`);
       APIHandler(data.substring(1));
     };
 
