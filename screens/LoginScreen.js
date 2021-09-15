@@ -59,11 +59,8 @@ const LoginScreen = ({ navigation }) => {
       <Text style={styles.title}>
         Welcome to FoodScan
       </Text>
-      <Text style={styles.body}>
-        Sign In Using Google
-      </Text>
       <Button
-        title = "Click Here to Sign In"
+        title = "Click Here to Sign In via Google"
         onPress={() => signInWithGoogleAsync()}
       />
     </View>
@@ -83,10 +80,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 38,
     fontWeight: 'bold',
-    marginBottom: 140,
-    marginTop: 30
+    marginBottom: 50,
+    marginTop: 40,
+    textAlign: 'center'
   },
   body: {
+    fontSize: 25,
+    marginTop: 0,
     fontSize: 25,
   }
 })

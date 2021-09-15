@@ -16,14 +16,28 @@ const BarcodeScreen = () => {
 
     const handleBarCodeScanned = ({ type, data }) => {
       setScanned(true);
-      //alert(`Bar code with type ${type} and data ${data.substring(1)} has been scanned!`);
-      //alert.prompt(`Bar code with type ${type} and data ${data.substring(1)} has been scanned!`)
-      var servingSize = Alert.prompt(
-        "Barcode scanned!",
-        "Please enter number of servings",
-        undefined,undefined,'1','number-pad'
-      )
-      console.log(`******************* ${servingSize} *********************`);
+      
+      //Get Serving Size asynchronously
+      async function handleInput(){
+        let input = '';
+        console.log(input);
+        input = await getInput();
+        console.log(input);
+      };
+
+      function getInput(){
+        return new Promise((resolve) =>{
+          const servingSize = Alert.prompt(
+            "Barcode scanned!",
+            "Please enter number of servings",
+            undefined,undefined,'0','number-pad'
+          );
+          resolve(servingSize);
+        });
+      };
+      handleInput();
+      
+      
       APIHandler(data.substring(1));
     };
 

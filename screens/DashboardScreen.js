@@ -16,25 +16,19 @@ const DashboardScreen = ( {navigation} ) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>
-                Welcome to the Dashboard Screen
+                Main Menu
+            </Text>
+            <Text style={styles.body}>
+                FoodScan is an app that provides essential nutrition information to help keep track of your meals
             </Text>
             <Button 
                 title = "Access Your Profile"
                 onPress={() => alert("Still working on Setting Up User Screen")}
             />
-            <Text style={styles.body}>
-                FoodScan provides essential nutrition information to help keep track of your meals
-            </Text>
-            <Text style={styles.body}>
-                Click Below to Access the Barcode Scanner
-            </Text>
             <Button 
                 title = "Barcode Scanner"
                 onPress={() => toBarcodeScreen()}
             />
-            <Text style={styles.body}>
-                Click Below to Sign Out
-            </Text>
             <Button 
                 title = "Sign Out"
                 onPress={() => userLogOut()}
@@ -55,8 +49,8 @@ const styles = StyleSheet.create({
       fontSize: 40,
       textAlign: 'center',
       fontWeight: 'bold',
-      marginBottom: 40,
-      marginTop: -100
+      marginBottom: 0,
+      marginTop: -50
     },
     body: {
       fontSize: 25,
