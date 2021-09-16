@@ -33,19 +33,26 @@
 7) Install the Barcode Scanner module for Expo:
 
     a) expo install expo-barcode-scanner
+
+8) Set up a config.json file in the root of your project for your FDC API key. The format should be the following -
+  
+  {
+    "API_KEY": "..."
+  }
     
-8) Run the project:
+9) Run the project:
 
     a) expo start 
     
-9) Navigate to the web server running the application:
+10) Navigate to the web server running the application:
     
     a) Click "Tunnel" button above the barcode 
     
     b) If Expo Go client app not downloaded...download from App Store
     
     c) Using iPhone camera...scan barcode and open app in Expo Go 
-    
+
+
 
 ## Using the App
 
