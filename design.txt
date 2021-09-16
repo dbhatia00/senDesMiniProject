@@ -30,6 +30,8 @@ Additionally, we added several screens to allow for users to better navigate the
   2) Dashboard
   3) Barcode Scanner / Profile 
   
+ Screenshots of this flow are shown in the README.md
+  
  Works Cited 
  
  1) https://docs.expo.dev/versions/latest/sdk/bar-code-scanner/ 
