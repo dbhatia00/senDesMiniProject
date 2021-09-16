@@ -1,4 +1,4 @@
-**Instructions for running application on iOS**
+## Instructions for running application on iOS
 
 1) Download project onto local machine
   
@@ -47,7 +47,7 @@
     c) Using iPhone camera...scan barcode and open app in Expo Go 
     
 
-**Using the APP**
+## Using the App
 
 When running correctly, the app will begin in the login screen as shown below. 
 
