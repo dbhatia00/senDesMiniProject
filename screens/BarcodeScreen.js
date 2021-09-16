@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button, Alert } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { db } from './Firebase'
+import configData from '../config.json'
 
 const BarcodeScreen = () => {
     const [hasPermission, setHasPermission] = useState(null);
@@ -61,7 +62,8 @@ const BarcodeScreen = () => {
 
 APIHandler = (inputData) => {
   db.collection('food_items')
-  fetch(`https://api.nal.usda.gov/fdc/v1/foods/search?query=${inputData}&api_key=DEMO_KEY`)
+  api_key = configData.API_KEY
+  fetch(`https://api.nal.usda.gov/fdc/v1/foods/search?query=${inputData}&api_key=${api_key}`)
     .then(response => response.json())
     .then(
       data => {
