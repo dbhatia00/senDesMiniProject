@@ -23,6 +23,12 @@ Next was the call to the FDC API. This was strapped to the barcode scanner modul
 For testing purposes, the entire data from the API was printed to the console. For sending to the database (and subsequently the REST API), we selected 
 bits of information.
   
+
+Additionally, we added several screens to allow for users to better navigate the app. The general flow is as follows -
+
+  1) Login page
+  2) Dashboard
+  3) Barcode Scanner / Profile 
   
  Works Cited 
  
