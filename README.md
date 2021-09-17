@@ -36,9 +36,9 @@
 
 8) Set up a config.json file in the root of your project for your FDC API key. The format should be the following -
   
-  {
-    "API_KEY": "..."
-  }
+    {
+      "API_KEY": "..."
+    }
     
 9) Run the project:
 
