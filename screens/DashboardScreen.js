@@ -1,18 +1,33 @@
+//DashboardScreen.js
+
+//Modules needed for DashboardScreen.js
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
+
+//Import auth field from Firebase.js
 import { auth } from './Firebase';
 
+//Dashboard Screen function 
 const DashboardScreen = ( {navigation} ) => {
+
+    //Function to take user to Profile Screen
+    toProfileScreen = () => {
+        navigation.navigate('Profile Screen')
+    }
     
+    //Function to take user to Barcode Screen
     toBarcodeScreen = () => {
         navigation.navigate('Barcode Screen')
     }
 
+    //Function to log the user out of the app
     userLogOut = () => {
         auth.signOut(),
         navigation.navigate('Login Screen')
     }
 
+    //Return will display Main Menu along with description of the app
+    //Three buttons (Profile Screen navigator, Barcode Screen navigator, and Sign Out) are included
     return (
         <View style={styles.container}>
             <Text style={styles.title}>
@@ -23,7 +38,7 @@ const DashboardScreen = ( {navigation} ) => {
             </Text>
             <Button 
                 title = "Access Your Profile"
-                onPress={() => alert("Still working on Setting Up User Screen")}
+                onPress={() => toProfileScreen()}
             />
             <Button 
                 title = "Barcode Scanner"

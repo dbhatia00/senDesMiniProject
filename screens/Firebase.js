@@ -1,7 +1,16 @@
+//Firebase.js
+
+//Modules needed for Firebase.js
+//Main Firebase import
 import firebase from 'firebase/app';
+
+//Firebase auth import (authentication)
 import 'firebase/auth';
+
+//Firebase firestore import (database)
 import 'firebase/firestore';
 
+//Firebase Configuration provided by Firebase
 var firebaseConfig = {
     apiKey: "AIzaSyBafUUKOO1SSKOM98AKAFtKTGJwzCVjdvo",
     authDomain: "miniproject-1c8a1.firebaseapp.com",
@@ -12,15 +21,21 @@ var firebaseConfig = {
     measurementId: "G-7DCRRLL4MJ"
 };
 
+//Declare app
 let app;
+//Check if app has been initialized with Firebase...if not initialize
 if (firebase.apps.length === 0) {
     app = firebase.initializeApp(firebaseConfig)
 } else {
     app = firebase.app()
 }
 
+//db serves as database
 const db = app.firestore();
+//auth serves as authentication
 const auth = firebase.auth();
+//provider allows access to Google provider data
 const provider = new firebase.auth.GoogleAuthProvider();
 
+//export db, auth, and provider
 export {db, auth, provider};
