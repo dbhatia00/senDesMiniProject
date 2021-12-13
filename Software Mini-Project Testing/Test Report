@@ -1,0 +1,25 @@
+EC 463 Software Mini-Project Testing
+
+Testing Procedure: 
+
+1) Open the mobile application in Expo Go
+
+2) Sign-in using BU Gmail account 
+
+3) Verify sign-in was successful 
+
+3) Navigate to Barcode Screen from the Main Menu
+
+4) Scan a jar of Nutella
+  a) 56.8 calories  
+  b) "HAZELNUT SPREAD WITH COCOA, COCOA"
+  
+5) Verify correct calories and name of item on the user profile page 
+
+
+Results: 
+
+We were able to verify that Gmail authentication in the mobile application was successful. The image file "Login Information" shows this.
+
+We were able to verify that the barcode scanner was successful and the calorie and name information was displayed on the user profile page.
+The image files "Food Item Information" and "User Profile Screen" show this.
